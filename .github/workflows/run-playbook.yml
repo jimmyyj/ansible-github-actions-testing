@@ -7,7 +7,7 @@ on:
         description: 'Message to print'
         required: true
         default: 'Hello from GitHub Actions!'
-        
+
 jobs:
   run-playbook:
     runs-on: ubuntu-latest
@@ -17,10 +17,10 @@ jobs:
     steps:
       - name: Output Ansible version
         run: ansible --version
-        
+
       - name: Pull Git repo to container
         uses: actions/checkout@v6
-        
+
       - name: Run Playbook
         run: |
           ansible-playbook main.yml -e "custom_message='${{ github.event.inputs.target_message }}'"
