@@ -6,5 +6,5 @@
 
   tasks:
     - name: Print the prompt input
-      debug:
+      ansible.builtin.debug:
         msg: "User input: {{ custom_message }}"
