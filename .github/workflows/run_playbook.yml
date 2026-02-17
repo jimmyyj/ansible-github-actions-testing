@@ -12,7 +12,7 @@ jobs:
   run-playbook:
     runs-on: ubuntu-latest
     container:
-      image: ansible-community/community-ee-base:latest
+      image: ghcr.io/ansible-community/community-ee-base:latest
     steps:
       - name: Output Ansible version
         run: ansible --version
