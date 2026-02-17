@@ -23,4 +23,4 @@ jobs:
 
       - name: Run Playbook
         run: |
-          ansible-playbook -i inventory/hosts.ini main.yml -e "custom_message='${{ github.event.inputs.target_message }}'"
+          ansible-playbook main.yml -e "custom_message='${{ github.event.inputs.target_message }}'"
