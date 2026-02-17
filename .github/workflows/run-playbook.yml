@@ -1,5 +1,5 @@
 ---
-name: Launch Ansible Playbook
+name: run-playbook
 on:
   workflow_dispatch:
     inputs:
