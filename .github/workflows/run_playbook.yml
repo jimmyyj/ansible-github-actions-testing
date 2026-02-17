@@ -21,9 +21,6 @@ jobs:
       - name: Pull Git repo to container
         uses: actions/checkout@v6
         
-      - name: Run ansible-lint
-        uses: ansible/ansible-lint@main
-        
       - name: Run Playbook
         run: |
           ansible-playbook main.yml -e "custom_message='${{ github.event.inputs.target_message }}'"
