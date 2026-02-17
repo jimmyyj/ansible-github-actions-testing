@@ -1,0 +1,10 @@
+---
+- name: Simple Playbook
+  hosts: localhost
+  connection: local
+  gather_facts: false
+  
+  tasks:
+    - name: Print the prompt input
+      debug:
+        msg: "User input: {{ custom_message }}"
