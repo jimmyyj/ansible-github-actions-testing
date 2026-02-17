@@ -13,6 +13,7 @@ jobs:
     runs-on: ubuntu-latest
     container:
       image: ghcr.io/ansible-community/community-ee-base:latest
+      options: --user root
     steps:
       - name: Output Ansible version
         run: ansible --version
